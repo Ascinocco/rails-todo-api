@@ -1,5 +1,6 @@
 # README
 
+The docker composition used for this api was build based on https://docs.docker.com/compose/rails/
 Start the app with `docker-compose up`
 
 This README would normally document whatever steps are necessary to get the
