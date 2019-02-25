@@ -1,8 +1,11 @@
 # app/lib/json_web_token.rb
 class JsonWebToken
   # secret to encode and decode token
-  HMAC_SECRET = Rails.application.secrets.secret_key_base
-
+  # @TODO: Using manual override for string temporaryly
+  # since the docker container I am using doesn't have a text
+  # editor installed and I can't update the secrets file
+  # HMAC_SECRET = Rails.application.secrets.secret_key_base
+  HMAC_SECRET = 'oh noo, this is not good at all 923423402 ;;'
   def self.encode(payload, exp = 24.hours.from_now)
     # set expiry to 24 hours from creation time
     payload[:exp] = exp.to_i

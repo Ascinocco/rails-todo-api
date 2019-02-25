@@ -1,5 +1,7 @@
 # README
 
+how to update rails secrets: https://medium.com/@wintermeyer/goodbye-secrets-welcome-credentials-f4709d9f4698
+
 The docker composition used for this api was build based on https://docs.docker.com/compose/rails/
 Start the app with `docker-compose up`
 
