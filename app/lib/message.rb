@@ -31,4 +31,8 @@ class Message
   def self.expired_token
     'Sorry, your token has expired. Please login to continue.'
   end
+
+  def self.passwords_do_not_match
+    'The passwords you provided do no match.'
+  end
 end

@@ -5,6 +5,10 @@ class UsersController < ApplicationController
   # POST /signup
   # return authenticated token upon signup
   def create
+    if (user_params[:password] != user_params[:password_confirmation])
+      return json_response({ message: Message.passwords_do_not_match }, :bad_request)
+    end
+
     user = User.create!(user_params)
     auth_token = AuthenticateUser.new(user.email, user.password).call
     response = { message: Message.account_created, auth_token: auth_token }
